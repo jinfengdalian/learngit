@@ -1,6 +1,7 @@
-# Git学习笔记
+Git学习笔记
+====
 
-## Git的安装
+### Git的安装
 
 git安装之要进行注册。注册的命令是：
 
@@ -20,18 +21,18 @@ git config --global user.email "jinfeng.dalian@gmail.com"
 注意：`git config`命令的`--global`参数，表示在这台器上所有的Git仓库都会使用这个配置。
 
 
-##  创建版本库
+###  创建版本库
 
 版本库（repository）可以理解成目录，目录里所有的文件都可以被git管理。
 在需要创建版本库的目录下，输入以下命令：`git init`。返回提示：
 
 `Initialized empty Git repository in /Users/jinfeng/Documents/learngit/.git/`
 
-- 把文件添加到仓库
+#### 把文件添加到仓库
 
 `git add learngit.md`
 
-- 把文件提交到仓库
+#### 把文件提交到仓库
 
 `git commit -m "第一次写的markdown格工的Git学习笔记"`
 
@@ -48,9 +49,9 @@ jinfeng@jinfengdeMac-mini learngit %
 
 `add`一次只能添加一个文件，而`commit`一次可以提交多个不同的文件。
 
-## 查看当前git状态
+### 查看当前git状态
 
-- 查看当前git的状态
+#### 查看当前git的状态
 
 `git --status`
 
@@ -65,7 +66,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-- 查看git更改内容
+#### 查看git更改内容
 
 `git diff learngit.md`
 
