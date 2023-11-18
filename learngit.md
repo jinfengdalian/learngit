@@ -114,3 +114,55 @@ index 86fb1b5..7b69577 100644
 +`add`一次只能添加一个文件，而`commit`一次可以提交多个不同的文件。
 ```
 `-`号代表删掉的部分，`+`代表添加的部分。
+
+### 版本回退
+
+在回退之前，必须定位。知道要退到哪一步，才能回退。没有坐标和方位是不能讲回退的。
+
+#### 查看历史记录
+
+`git log`
+
+返回
+
+```
+commit 8e5dc045243a6a028d67c894b63684c4bd9ad9b4 (HEAD -> main)
+Author: JinFeng <jinfeng.dalian@gmail.com>
+Date:   Fri Nov 17 22:00:10 2023 +0800
+
+    把一些二级标题改成三级标题
+
+commit 477e404fb1adb6981913ae4356352617a4cd1587
+Author: JinFeng <jinfeng.dalian@gmail.com>
+Date:   Thu Nov 16 19:49:23 2023 +0800
+
+    添加status，diff的笔记
+
+commit da01e1dd4456aa1676ba37ee1011c6dca288b2e5
+Author: JinFeng <jinfeng.dalian@gmail.com>
+Date:   Thu Nov 16 19:31:51 2023 +0800
+
+    提交test.md
+
+commit 6fcbff61d62a9d3d73367e094b5127c8fb397097
+Author: JinFeng <jinfeng.dalian@gmail.com>
+Date:   Wed Nov 15 22:30:40 2023 +0800
+
+    第一次写的markdown格工的Git学习笔记
+jinfeng@jinfengdeMac-mini learngit % 
+```
+
+其中的`(HEAD -> main)`表示当前位置。其中的`8e5dc045243a6a028d67c894b63684c4bd9ad9b4`是那一次提交的序号，学名版本号。
+
+#### 恢复文件
+
+`git reset --HEAD`
+
+其中HEAD是版本号。版本号不一定写全，写头几位，可能是6位就差不多了。
+
+还有一个功能更强的命令，可以查看已经被删除了的版本号，换句话说是后悔之后又后悔了。
+
+`git reflog`
+
+
+
